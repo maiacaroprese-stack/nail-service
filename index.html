@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NailPro B2B Services</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<style>
+:root {
+  --primary: #c8a2ff;
+  --secondary: #f3e8ff;
+  --dark: #2d2d2d;
+  --light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* HERO */
+.hero {
+  background: var(--secondary);
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 15px;
+  min-height: 44px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a978ff;
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-card i {
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* CASES */
+.cases-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.case {
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: var(--primary);
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* DESKTOP */
+@media(min-width: 768px) {
+  .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cases-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div>
+      <h1>Premium Nail Services for Businesses</h1>
+      <p>Elevate your brand with professional nail care solutions tailored for salons, hotels, and corporate clients.</p>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+    <img src="https://placehold.co/600x400" alt="Nail Service">
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-hand-sparkles"></i>
+        <h3>Manicure</h3>
+        <p>Professional manicure services for corporate clients.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-spa"></i>
+        <h3>Pedicure</h3>
+        <p>Relaxing and hygienic pedicure treatments.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Nail Art</h3>
+        <p>Custom nail designs for branding and events.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Corporate Packages</h3>
+        <p>Tailored services for offices, hotels, and events.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section>
+  <div class="container">
+    <h2>Client Success</h2>
+    <div class="cases-grid">
+      <div class="case">
+        <h3>Luxury Hotel</h3>
+        <p>+35% customer satisfaction</p>
+      </div>
+      <div class="case">
+        <h3>Corporate Office</h3>
+        <p>Increased employee engagement by 25%</p>
+      </div>
+      <div class="case">
+        <h3>Beauty Salon Chain</h3>
+        <p>Boosted repeat clients by 40%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/https://formspree.io/f/xwvwjkda" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="company" placeholder="Company">
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 NailPro B2B Services</p>
+  <div>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
